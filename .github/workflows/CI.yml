@@ -86,7 +86,7 @@ jobs:
             build: yarn build --target aarch64-pc-windows-msvc
           - host: ubuntu-latest
             target: wasm32-wasip1-threads
-            build: yarn build --target wasm32-wasip1-threads
+            build: RUSTFLAGS="--cfg tokio_unstable" yarn build --target wasm32-wasip1-threads
     name: stable - ${{ matrix.settings.target }} - node@22
     runs-on: ${{ matrix.settings.host }}
     steps:
