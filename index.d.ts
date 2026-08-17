@@ -31,7 +31,7 @@ export declare function fetchUserProfile(userId: number, callback: ((err: Error 
 export declare function monitorSystemResources(callback: ((err: Error | null, arg: number) => any)): void
 
 /** Test function with optional callback */
-export declare function optionalCallbackTest(value: string, callback?: (arg: string) => void | undefined | null): string
+export declare function optionalCallbackTest(value: string, callback?: ((arg: string) => void) | undefined | null): string
 
 /**
  * Demonstrates the difference between Blocking and NonBlocking call modes

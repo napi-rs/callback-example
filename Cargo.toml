@@ -9,12 +9,12 @@ version = "0.1.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = { version = "3.0.0", features = ["async"] }
-napi-derive = "3.0.0"
-tokio = { version = "1.40.0", features = ["full"] }
+napi = { version = "3.12.1", features = ["async"] }
+napi-derive = "3.6.3"
+tokio = { version = "1.53.1", features = ["full"] }
 
 [build-dependencies]
-napi-build = "2"
+napi-build = "2.4.1"
 
 [profile.release]
 lto = true
