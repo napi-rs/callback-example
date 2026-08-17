@@ -247,6 +247,10 @@ jobs:
         node:
           - '22'
           - '24'
+        exclude:
+          # Node 24 no longer ships linux/arm/v7 (32-bit ARM) builds
+          - target: armv7-unknown-linux-gnueabihf
+            node: '24'
     runs-on: ${{ contains(matrix.target, 'aarch64') && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
     steps:
       - uses: actions/checkout@v7
