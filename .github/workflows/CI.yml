@@ -146,7 +146,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Start FreeBSD VM
-        uses: cross-platform-actions/action@v1.4.0
+        uses: cross-platform-actions/action@v1.6.0
         env:
           DEBUG: napi:*
           RUSTUP_IO_THREADS: 1
